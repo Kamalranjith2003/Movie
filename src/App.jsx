@@ -12,7 +12,6 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/movie/:id" element={<MovieDetail />} />
       </Routes>
-      <Footer />
     </Router>
   );
 };

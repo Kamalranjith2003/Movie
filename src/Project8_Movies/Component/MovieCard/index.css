@@ -1,12 +1,12 @@
 .movie-card {
-    background-color: #222;
+    background-color: black;  
     color: #fff;
     padding: 10px;
     border-radius: 10px;
     text-align: center;
   }
   .movie-card img {
-    width: 100%;
+    width: 80%;
     border-radius: 10px;
   }
   

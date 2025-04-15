@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import MovieCard from "../MovieCard";
 import Navbar from "../Navbar";
+import Footer from "../Footer";
 import "./index.css";
 
 const baseUrl = "https://api.themoviedb.org/3";
@@ -26,13 +27,17 @@ const Home = () => {
   }, [search]);
 
   return (
-    <div className="home">
+    
+    <div className="whole">
       <Navbar setSearch={setSearch} />
+      <div className="home">      
       <div className="movies-list">
         {movies.map((movie) => (
           <MovieCard key={movie.id} movie={movie} />
         ))}
       </div>
+    </div>
+    <Footer/>
     </div>
   );
 };
