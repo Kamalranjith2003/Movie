@@ -5,7 +5,7 @@ import "./index.css";
 const Navbar = ({ setSearch }) => {
   return (
     <nav className="navbar">
-      <Link to="/" className="logo">Movie Pool</Link>
+      <Link to="/" className="logo">Movie Pool</Link>     
       <input 
         type="text" 
         placeholder="Search Movies..." 

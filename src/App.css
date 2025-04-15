@@ -18,3 +18,4 @@
       console.error("Error fetching trailer:", error);
     }
   }; */
+  /* Hide scrollbar but keep scrolling */

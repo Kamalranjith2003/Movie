@@ -1,116 +1,162 @@
 /* index.css */
+
 .movie-detail {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 20px;
-  background-color: #121212;
-  color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+  padding: 6rem 2rem 2rem; /* Adjusted top padding to avoid being hidden */
+  color: #fff;
+  background-color: purple;
+  min-height: 100vh;
+  text-align: center;
 }
+
 
 .movie-detail h1 {
   font-size: 2.5rem;
-  margin-bottom: 20px;
-  text-align: center;
-  color: #00bcd4;
+  margin-bottom: 1rem;
 }
 
 .movie-detail img {
-  display: block;
-  width: 100%;
-  max-width: 350px;
-  margin: 0 auto 20px;
+  width: 300px;
   border-radius: 10px;
-  box-shadow: 0 0 10px #00bcd4;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+  margin: 1rem 0;
+  max-width: 90%;
 }
 
 .movie-detail p {
   font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 15px;
+  margin: 1rem auto;
+  max-width: 700px;
+  padding: 0 1rem;
 }
 
 .movie-detail b {
   display: block;
+  margin: 1rem 0;
   font-size: 1.2rem;
-  margin-bottom: 20px;
-  color: #ffc107;
+  color: #facc15; /* Yellow for rating */
 }
 
 .buttons {
+  margin: 1.5rem 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
-  margin-bottom: 25px;
+  gap: 1rem;
 }
 
 .buttons button {
-  padding: 10px 20px;
-  font-size: 1rem;
+  background-color: #1e3a8a;
+  color: #fff;
   border: none;
-  border-radius: 25px;
-  background-color: #00bcd4;
-  color: white;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background 0.3s ease;
 }
 
 .buttons button:hover {
-  background-color: #0197a5;
+  background-color: #2563eb;
 }
 
 .trailer {
-  margin: 30px 0;
+  margin: 2rem auto;
+  max-width: 90%;
+  border: 2px solid #1e3a8a;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 0 10px #00bcd4;
+}
+
+.trailer iframe {
+  width: 100%;
+  height: 400px;
 }
 
 .cast-section {
-  margin-top: 40px;
+  margin-top: 2rem;
+  padding: 0 1rem;
 }
 
 .cast-section h2 {
-  text-align: center;
   font-size: 2rem;
-  margin-bottom: 20px;
-  color: #00bcd4;
+  margin-bottom: 1rem;
+  color: #f472b6;
 }
 
 .cast-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 1rem;
 }
 
 .cast-card {
-  background-color: #1e1e1e;
-  padding: 10px;
+  background-color: #1e293b;
+  padding: 1rem;
   border-radius: 10px;
+  width: 140px;
   text-align: center;
-  width: 150px;
-  box-shadow: 0 0 8px rgba(0, 188, 212, 0.3);
-  transition: transform 0.3s ease;
-}
-
-.cast-card:hover {
-  transform: translateY(-5px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .cast-card img {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 10px;
+  width: 100px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
 }
 
 .cast-card p {
   font-weight: bold;
-  margin-bottom: 5px;
+  margin-bottom: 0.2rem;
 }
 
 .cast-card small {
-  color: #aaa;
+  color: #cbd5e1;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .movie-detail h1 {
+    font-size: 2rem;
+  }
+
+  .trailer iframe {
+    height: 300px;
+  }
+
+  .cast-card {
+    width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .movie-detail h1 {
+    font-size: 1.5rem;
+  }
+
+  .movie-detail img {
+    width: 90%;
+  }
+
+  .trailer iframe {
+    height: 200px;
+  }
+
+  .buttons button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .cast-card {
+    width: 100px;
+    padding: 0.5rem;
+  }
+
+  .cast-card img {
+    width: 80px;
+    height: 110px;
+  }
 }

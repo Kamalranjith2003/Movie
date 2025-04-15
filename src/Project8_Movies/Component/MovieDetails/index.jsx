@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import "./index.css";
-
+import Navbar from "../Navbar";
+import Footer from '../Footer'
 const baseUrl = "https://api.themoviedb.org/3";
 const api_key = "f255ba050c7dde33ed9a79be865e705c";
 
@@ -68,7 +69,9 @@ const MovieDetail = () => {
   if (!movie) return <p>Loading...</p>;
 
   return (
-    <div className="movie-detail">
+    <div>
+      <Navbar/>
+      <div className="movie-detail">
       <h1>{movie.title}</h1>
       <img
         src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
@@ -115,6 +118,8 @@ const MovieDetail = () => {
           </div>
         </div>
       )}
+    </div>
+    <Footer/>
     </div>
   );
 };
